@@ -121,17 +121,13 @@ swal({
 
                                         while ($row=mysqli_fetch_array($run)) {
                                             # code...
-                                        
-
-
-
 
                                          ?>
                                          <tr>
                                              <td><?php echo $row['subject_id'] ?></td>
                                              <td><?php echo $row['study_site'] ?></td>
                                              <td><?php echo $row['visit_name'] ?></td>
-                                             <!-- <td><a href="edit_oct_form.php?ID=<?php echo $row['id'] ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</a></td> -->
+                                             <td><a href="edit_oct_form.php?ID=<?php echo $row['id'] ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</a></td>
                                          </tr>
                                      </tbody>
                                  <?php } ?>

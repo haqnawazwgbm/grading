@@ -34,14 +34,14 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 
   <?php 
-   require 'includes/connection.php';
+   require '../includes/connection.php';
 
    $q="SELECT * FROM user where type='grader1'";
    $run=mysqli_query($con,$q);
     $row=mysqli_fetch_array($run);
 
     if (isset($_GET['ID'])) {
-      $sub_id = $_GET['ID'];
+      $id = $_GET['ID'];
       $query = "SELECT * FROM user_view_sub_adju_oct INNER JOIN adjudication_oct ON user_view_sub_adju_oct.subject_id = adjudication_oct.subject_id WHERE user_view_sub_adju_oct.subject_id='$id'";
       $result = mysqli_query($con,$query);
       $oct = mysqli_fetch_array($result);
@@ -600,9 +600,6 @@ else
 
         
 <?php 
-
-require 'includes/connection.php';
-
 
 
 

@@ -37,6 +37,7 @@ crossorigin="anonymous"></script>
        <body style="background-color: #f7f7f7;">
 
 
+       <?php require '../includes/connection.php'; ?>
        <?php require 'includes/topheader.php'; ?>
        <?php require 'includes/desktopheader.php'; ?>
        <!-- END HEADER DESKTOP-->
@@ -120,9 +121,6 @@ crossorigin="anonymous"></script>
        <tbody>
  
        <?php 
-
-       $con = mysqli_connect('localhost','root','','kalvista');
-
 
        $select="SELECT * FROM oct_view_g1";
        $query=mysqli_query($con,$select);

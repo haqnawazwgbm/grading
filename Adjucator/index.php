@@ -130,7 +130,7 @@ swal({
                                              <td><?php echo $row['subject_id'] ?></td>
                                              <td><?php echo $row['study_name'] ?></td>
                                              <td><?php echo $row['visit_name'] ?></td>
-                                             <td><a href="field_form.visit_name?ID=<?php echo $row['subject_id'] ?>"><i class="fa fa-plus-square" aria-hidden="true"></i>Create</a></td>
+                                             <td><a href="field_form.php?ID=<?php echo $row['subject_id'] ?>"><i class="fa fa-plus-square" aria-hidden="true"></i>Create</a></td>
                                          </tr>
                                      </tbody>
                                  <?php } ?>

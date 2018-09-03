@@ -34,6 +34,7 @@ session_start();
 }
 </style>
 <body style="background-color: #f7f7f7;">
+  <?php require '../includes/connection.php'; ?>
   <?php require 'includes/topheader.php'; ?>
   <?php require 'includes/desktopheader.php'; ?>
     <!-- END HEADER DESKTOP-->
@@ -77,7 +78,6 @@ session_start();
                                     <form action="" method="post" class="">
                                        
                             <?php 
-                              $con = mysqli_connect('localhost','root','','kalvista');
                               $select="SELECT user_id FROM user where type='admin'";
                                $run=mysqli_query($con,$select);
 

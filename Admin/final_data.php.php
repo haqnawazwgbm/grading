@@ -39,6 +39,7 @@
        <body style="background-color: #f7f7f7;"  dir="ltr">
 
 
+       <?php require '../includes/connection.php'; ?>
        <?php require 'includes/topheader.php'; ?>
        <?php require 'includes/desktopheader.php'; ?>
        <!-- END HEADER DESKTOP-->
@@ -210,8 +211,6 @@
             </thead>
             <tbody>
                <?php 
-
-       $con = mysqli_connect('localhost','root','','kalvista');
 
 
        $select="SELECT * FROM adjudication_fp_g";

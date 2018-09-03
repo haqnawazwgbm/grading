@@ -28,7 +28,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 
   <?php 
-   require 'includes/connection.php';
+   require '../includes/connection.php';
 
    $q="SELECT * FROM user where type='QEC'";
    $run=mysqli_query($con,$q);
@@ -873,7 +873,6 @@ input[type=textarea]:disabled {
 
 <?php 
 
-require 'includes/connection.php';
 
 
 

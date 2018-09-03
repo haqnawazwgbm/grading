@@ -16,6 +16,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+<?php require '../includes/connection.php'; ?>
 <?php require 'includes/topheader.php'; ?>
 
 <body class="animsition">
