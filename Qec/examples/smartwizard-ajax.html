@@ -1,0 +1,1159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Smart Wizard - a JavaScript jQuery Step Wizard plugin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Include SmartWizard CSS -->
+    <link href="../dist/css/smart_wizard.css" rel="stylesheet" type="text/css" />
+
+    <!-- Optional SmartWizard theme -->
+    <link href="../dist/css/smart_wizard_theme_circles.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/css/smart_wizard_theme_arrows.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/css/smart_wizard_theme_dots.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+
+        <!-- SmartWizard html -->
+        <div id="smartwizard">
+            <ul>
+                <li><a href="#step-1">Step 1<br /><small>table 1</small></a></li>
+                <li><a href="#step-2"
+                  >Step 2<br /><small>DIABETIC RETINOPATHY (DR) GRADING SEVERITY SCALE– OD</small></a></li>
+                <li><a href="#step-3">Step 3 <br /><small>DIABETIC RETINOPATHY (DR) GRADING SEVERITY SCALE– OS</small></a></li>
+                <li><a href="#step-4" data-content-url="./ajaxtest.php">Step 4<br /><small>This is tab's description</small></a></li>
+            </ul>
+
+            <div>
+                <div id="step-1" class="">
+                    <h2></h2>
+                      <table class="table-bordered" style="font-size: 12px;">
+                                 <h3 class="text-info"  style="margin-left: 5%;">COLOR FUNDUS PHOTOGRAPHY  QUALITY CONTROL</h3>
+                                 <thead colspan="3" style="padding: 10px">
+                                     <th></th>
+                                     <th class="text-center" style="padding: 15px; color: #ffff; background-color:  #008398" > OD</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;"> OS</th>
+                                 </thead>
+                                 <tbody> 
+                                     <tr>
+                                         <td>
+                                             <label>Were fundus photos were received?</label>
+
+                                         </td>
+                                         <td>
+                                          <input type="radio" name="fundusphoto_od"  value="Yes">   YES
+                                          <input type="radio" name="fundusphoto_od" value="No">   No
+
+                                         </td>
+                                         <td>
+                                         <input type="radio" name="fundusphoto_os"  value="Yes">   YES
+                                          <input type="radio" name="fundusphoto_os" value="No">   No
+
+                                         </td>
+                                          
+                                     </tr>
+                                     <tr>
+                                       <td><label>Was fundus reflex image obtained?</label></td> 
+                                        <td>
+                                          <input type="radio" name="reflex_od" value="Yes"> YES
+                                            <input type="radio" name="reflex_od" value="No"> No
+
+                                          </td>
+
+                                          <td>
+                                          <input type="radio" name="reflex_os" value="Yes"> YES
+                                            <input type="radio" name="reflex_os" value="No"> No
+
+                                          </td>
+                                          
+
+                                         
+                                     </tr>
+                                    <tr>
+                                        
+                                       <td><label> Any media opacities that obscure the view of the retina?</label></td>
+                                       <td>
+                                          <input type="radio" name="media_od" value="Yes">  YES
+                                          <input type="radio" name="media_od" value="No">  No
+
+                                         </td>
+                                          <td>
+                                          <input type="radio" name="media_os" value="Yes"> YES
+                                          <input type="radio" name="media_os" value="No">  No
+
+                                         </td>
+                                    </tr>
+
+                                    <tr>
+                                        
+                                       <td >
+                                          <label>If the answer to the previous question is yes, <br>please specify the level the opacity  interferes with view:</label>
+                                       </td>
+                                       <td>
+                                          <input type="radio" name="opeacity_interefer_od" value="Negligible">  Negligible <br>
+                                          <input type="radio" name="opeacity_interefer_od" value="Minimal">  Minimal <br>
+                                          <input type="radio" name="opeacity_interefer_od" value="Moderate">  Moderate <br>
+                                          <input type="radio" name="opeacity_interefer_od" value="Significant">  Significant <br>
+
+                                         </td>
+                                          <td>
+                                           <input type="radio" name="opeacity_interefer_os" value="Negligible">  Negligible <br>
+                                          <input type="radio" name="opeacity_interefer_os" value="Minimal">  Minimal <br>
+                                          <input type="radio" name="opeacity_interefer_os" value="Moderate">  Moderate <br>
+                                          <input type="radio" name="opeacity_interefer_os" value="Significant">  Significant <br>
+
+                                         </td>
+                                    </tr>
+                                     <td>
+                                          <label>Confidence score on FP?</label>
+                                       </td>
+                                       <td>
+                                          <input type="radio" name="confidence_od" value="Gradable"> Gradable <br>
+                                          <input type="radio" name="confidence_od" value="Partially Gradable"> Partially Gradable <br>
+                                          <input type="radio" name="confidence_od" value="Ungradable"> Ungradable <br>
+                                        
+
+                                         </td>
+                                          <td>
+                                         <input type="radio" name="confidence_os" value="Gradable"> Gradable <br>
+                                          <input type="radio" name="confidence_os" value="Partially Gradable"> Partially Gradable <br>
+                                          <input type="radio" name="confidence_os" value="Ungradable"> Ungradable <br>
+                               
+
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Comments:</label></td>
+                                        <td>
+                                            <textarea name="comments_od"></textarea>
+                                        </td>
+
+
+                                        <td>
+                                            <textarea name="comments_os"></textarea>
+                                        </td>
+                                    </tr>
+
+                                     <tr>
+                                         <td>Location</td>
+                                         <td>
+                                          <input type="radio" name="location_od" value="4 Field"> 4 Field <br>
+                                          <input type="radio" name="location_od" value=" 7 Field"> 7 Field
+
+                                         </td>
+                                         <td>
+                                          <input type="radio" name="location_os" value="4 Field"> 4 Field <br>
+                                          <input type="radio" name="location_os" value=" 7 Field"> 7 Field
+                                         </td>
+                                     </tr>
+                                      <tr>
+                                          <td>Magnification</td>
+                                          <td><input type="radio" name="maginfication_od" value="50"> 50<sup>o</sup> <br>
+                                              <input type="radio" name="maginfication_od" value="60"> 60<sup>o</sup> <br>
+                                              <input type="radio" name="maginfication_od" value="30"> 30<sup>o</sup>/35<sup>o</sup> <br>
+                                              <input type="radio" name="maginfication_od" value="45"> 45<sup>o</sup> <br>
+
+                                          </td>
+                                          <td><input type="radio" name="maginfication_os" value="50"> 50<sup>o</sup> <br>
+                                              <input type="radio" name="maginfication_os" value="60"> 60<sup>o</sup> <br>
+                                              <input type="radio" name="maginfication_os" value="30"> 30<sup>o</sup>/35<sup>o</sup> <br>
+                                              <input type="radio" name="maginfication_os" value="45"> 45<sup>o</sup> <br>
+
+                                          </td>
+                                          
+                                          
+                                      </tr>
+                                 </tbody>
+                                 
+                               
+                            </table>
+                </div>
+                <div id="step-2" class="">
+                    <h2>OD</h2>
+                     <div class="container-fluid">
+                       <div class="row">
+                         <div class="col-sm-6">
+                            <table class="table-bordered" style="font-size: 10px; ">
+                                 <h4 class="text-info" style="margin-left: 5%;">DIABETIC RETINOPATHY (DR) GRADING SEVERITY SCALE– OD</h4>
+                                 <thead colspan="4" style="padding: 10px">
+                                     <th></th>
+                                     <th class="text-center" style="padding: 15px; color: #ffff; background-color:  #008398" >Field 1</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 2</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 3</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 4</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 5</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 6</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 7</th>
+                                     
+                                 </thead>
+                                 <tbody> 
+                                     <tr>
+                                         <td>
+                                             <label>Microaneurysms</label>
+
+                                         </td>
+                                         <td>
+                                           <input type="checkbox" name="MA1_od" value="Definite"> Present <br>
+                                            
+
+                                         </td>
+                                         <td>
+                                         <input type="checkbox" name="MA2_od" value="Definite"> Present <br>
+                                          
+                                         </td>
+                                          <td>
+                                         <input type="checkbox" name="MA3_od" value=Definitet"> Present <br>
+                                         
+                                         </td> 
+                                         <td>
+                                         <input type="checkbox" name="MA4" value="Definite"> Present <br>
+                                         
+                                         </td> 
+                                         <td>
+                                         <input type="checkbox" name="MA5_od" value="Definite"> Present <br>
+                                        
+                                         </td>
+
+                                         <td>
+                                         <input type="checkbox" name="MA6_od" value="Definite"> Present <br>
+                                         
+                                         </td>
+                                          <td>
+                                         <input type="checkbox" name="MA7_od" value="Definite"> Present <br>
+                                         
+                                         </td>
+                                          
+                                     </tr>
+                                     <tr>
+                                       <td>
+                                        <label>Retinal Hemorrhages</label>
+                                      </td> 
+                                        <td><input type="checkbox" name="RH1_od" value="Present"> Present <br>
+                                           
+                                        </td>
+
+                                        <td><input type="checkbox" name="RH2_od" value="Present"> Present <br>
+                                        
+                                        </td>
+                                        <td>
+                                          
+                                          <input type="checkbox" name="RH3_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="RH3_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="RH3_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="RH3_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="RH3_od" value="Very Sever"> Very Sever 
+
+                                        </td>
+
+                                        <td> 
+                                         
+                                          <input type="checkbox" name="RH4_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="RH4_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="RH4_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="RH4_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="RH4_od" value="Very Sever"> Very Sever <br></td>
+                                        <td> 
+                                        
+                                          <input type="checkbox" name="RH5_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="RH5_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="RH5_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="RH5_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="RH5_od" value="Very Sever"> Very Sever <br></td>
+
+                                        <td>
+                                        
+                                          <input type="checkbox" name="RH6_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="RH6_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="RH6_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="RH6_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="RH6_od" value="Very Sever"> Very Sever <br></td>
+                                          <td>
+                                           
+                                            <input type="checkbox" name="RH7_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="RH7_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="RH7_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="RH7_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="RH7_od" value="Very Sever"> Very Sever <br></td>
+                                         
+                                     </tr>
+                                    <tr>
+                                        
+                                       <td><label>Hard Exudates</label></td>
+                                       <td><input type="checkbox" name="HE1_od" value="Definite"> Present <br>
+                                        
+
+                                       </td>
+                                        <td><input type="checkbox" name="HE2_od" value="Definite"> Present <br>
+                                       
+
+                                        </td>
+                                        <td>
+                                           <input type="checkbox" name="HE3_od" value="Definite"> Present <br>
+                                         
+
+                                        </td>
+                                        <td> 
+                                          <input type="checkbox" name="HE4_od" value="Definite"> Present <br>
+                                         
+                                        <td> 
+                                          <input type="checkbox" name="HE5_od" value="Definite"> Present <br>
+                                         
+
+                                        <td>
+                                          <input type="checkbox" name="HE6_od" value="Definite"> Present <br>
+
+                                          </td>
+                                          <td>
+                                            <input type="checkbox" name="HE7_od" value="Definite"> Present <br>
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                        
+                                       <td >
+                                          <label>Soft Exudates</label>
+                                       </td>
+                                       <td><input type="checkbox" name="SE1_od" value="Definite"> Present <br>
+                                         
+
+                                       </td>
+                                        <td><input type="checkbox" name="SE2_od" value="Definite"> Present <br>
+                                        
+
+
+                                        </td>
+                                        <td>
+                                         <input type="checkbox" name="SE3_od" value=Definitet"> Present <br>
+                                         
+
+                                        </td>
+                                        <td>
+                                           <input type="checkbox" name="SE4_od" value="Definite"> Present <br>
+                                        </td>
+                                        <td> 
+                                          <input type="checkbox" name="SE5_od" value="Definite"> Present <br>
+                                          </td>
+
+
+                                        <td>
+                                           <input type="checkbox" name="SE6_od" value="Definite"> Present <br>
+                                          </td>
+                                          <td>
+                                            <input type="checkbox" name="SE7_od" value="Definite"> Present <br>
+                                           </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                          <label>Venous Looping</label>
+                                       </td>
+                                      <td><input type="checkbox" name="VL1_od" value="Definite"> Present <br>
+                                       
+                                         
+
+
+                                      </td>
+                                        <td>
+
+                                          <input type="checkbox" name="VL2_od" value="Definite"> Present <br>
+
+                                         
+
+                                        </td>
+                                        <td>
+                                          <input type="checkbox" name="VL3_od" value="Definite"> Present <br> 
+                                          
+
+                                        </td>
+                                        <td> 
+                                          <input type="checkbox" name="VL4_od" value="Definite"> Present <br>
+                                          </td>
+                                        <td> 
+                                          <input type="checkbox" name="VL5_od" value="Definite"> Present <br>
+                                          </td>
+                                        <td>
+                                           <input type="checkbox" name="VL6_od" value="Definite"> Present <br>
+                                          </td>
+                                          <td>
+                                            <input type="checkbox" name="VL7_od" value="Definite"> Present <br>
+                                            </td>
+                                    </tr>
+                                    <tr>  
+                                        <td><label>Intraretinal Microvascular Abnormalities</label></td>
+
+                                        <td><input type="checkbox" name="IRMA1_od" value="Definite"> Present <br>
+                                         
+                                        </td>
+                                        <td>
+                                          <input type="checkbox" name="IRMA2_od" value="Definite"> Present <br>
+                                         
+
+                                        </td>
+                                        <td>
+                                          <input type="checkbox" name="IRMA3_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="IRMA3_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="IRMA3_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="IRMA3_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="IRMA3_od" value="Very Sever"> Very Sever 
+
+                                        </td>
+                                        <td>
+                                         
+                                         <input type="checkbox" name="IRMA4_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="IRMA4_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="IRMA4_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="IRMA4_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="IRMA4_od" value="Very Sever"> Very Sever <br></td>
+                                        <td> 
+                                          
+                                          <input type="checkbox" name="IRMA5_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="IRMA5_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="IRMA5_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="IRMA5_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="IRMA5_od" value="Very Sever"> Very Sever <br></td>
+
+                                        <td>
+                                          
+                                          <input type="checkbox" name="IRMA6_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="IRMA6_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="IRMA6_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="IRMA6_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="IRMA6_od" value="Very Sever"> Very Sever <br></td>
+                                          <td>
+                                            
+                                            <input type="checkbox" name="IRMA7_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="IRMA7_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="IRMA7_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="IRMA7_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="IRMA7_od" value="Very Sever"> Very Sever <br></td>
+                                       
+                                    </tr>
+
+                                     <tr>
+                                         <td><label>Venous Bleeding</label></td>
+                                         <td><input type="checkbox" name="VB1_od" value="Definite"> Present <br>
+                                          
+
+                                         </td>
+                                        <td>
+                                          <input type="checkbox" name="VB2_od" value="Definite"> Present <br>
+                                       
+
+                                        </td>
+                                        <td>
+                                          
+                                          <input type="checkbox" name="VB3_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="VB3_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="VB3_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="VB3_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="VB3_od" value="Very Sever"> Very Sever 
+
+                                        </td>
+                                        <td> 
+                                           
+                                          <input type="checkbox" name="VB4_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="VB4_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="VB4_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="VB4_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="VB4_od" value="Very Sever"> Very Sever <br></td>
+                                        <td>
+                                         
+                                          <input type="checkbox" name="VB5_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="VB5_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="VB5_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="VB5_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="VB5_od" value="Very Sever"> Very Sever <br></td>
+
+                                        <td>
+                                          
+                                          <input type="checkbox" name="VB6_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="VB6_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="VB6_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="VB6_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="VB6_od" value="Very Sever"> Very Sever <br></td>
+                                          <td>
+                                            
+                                            <input type="checkbox" name="VB7_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="VB7_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="VB7_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="VB7_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="VB7_od" value="Very Sever"> Very Sever <br></td>
+                                     </tr>
+                                      <tr>
+                                          <td><label>NPDR LEVEL OD</label></td>
+                                          <td colspan="5"><select class="form-control" name="levelod">
+                                            <option>Select NPDR</option>
+
+                                          <option value="NPDR Level 10 ">
+                                            NPDR Level 10 
+                                          </option>
+                                           <option value="NPDR Level 14*">
+                                            NPDR Level 14*
+                                          </option>
+                                           <option value="NPDR Level 15*">
+                                            NPDR Level 15*
+                                          </option>
+                                           <option value="NPDR Level 20">
+                                         NPDR Level 20
+                                          </option>
+                                           <option value="NPDR Level 35**">
+                                            NPDR Level 35**
+                                          </option>
+                                           <option value=" NPDR Level 43">
+                                            NPDR Level 43
+                                          </option>
+                                          <option value="NPDR Level 47"> 
+                                          NPDR Level 47
+                                          </option>
+                                          <option value=" NPDR Level 53">
+                                          NPDR Level 53
+                                          </option>
+                                          <option value="PDR Level ≥ 60">
+                                          PDR Level ≥ 60
+                                          </option>
+                                        </select>
+                                      </td>
+                                          
+                                      </tr>
+
+
+                                 </tbody>
+                                 
+
+                    </table>
+
+                         </div>
+
+                         <div class="col-sm-6">
+                            <table class="table table-bordered table-hover" style="font-size:10px; color:black; ">
+                      <h5 class="text-info text-danger"  style="margin-left: 8%;">DIABETIC RETINOPATHY (DR) GRADING KEY</h5>
+                       <thead>
+                        
+                       </thead>
+                       <tbody>
+                         <tr>
+                           <td><b>NPDR Level 10</b> </td>
+                            <td>DR Absent</td>
+                             <td>MA and other characteristics absent</td>
+                         </tr>
+
+                         <tr>
+                           <td><b>NPDR Level 14* </b> </td>
+                            <td>DR Questionable</td>
+                             <td><b>One or more of:</b>
+                              HE definite; MA absent <br>
+                              IRMA definite; MA absent <br>
+                              Venous loops >D/1; MA absent 
+                              </td>
+                         </tr>
+
+                         <tr>
+                           <td><b>NPDR Level 15* </b> </td>
+                            <td>DR Questionable</td>
+                            <td>Hemorrhage Definite <br>
+                              MAs Absent
+                               
+                            </td>
+                            
+                            <tr>
+                              <td><b>NPDR Level 20 </b></td>
+                              <td>MAs Only</td>
+                              <td>Microaneurysms definite, other characteristics absent</td>
+                            </tr>
+                            <tr>
+                            <td><b>NPDR Level 35** </b></td>
+                            <td>Mild NPDR</td>
+                            <td><b>One or more of:</b><br>
+                                Venous loops definite ≥1 <br>
+                                SE, IRMA or VB = Questionable <br>
+                                RH = present (< STD 1) <br>
+                                HE Definite ≥ 1 (STD 3, 4 and 5 in any field) <br>
+                                SE Definite ≥ 1 (STD 8A and 5)
+
+
+
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td><b>NPDR Level 43</b></td>
+                          <td>Moderate NPDR</td>
+                          <td>
+                             H/Ma = Moderate in 4-5 fields (≥ STD 1 and < STD 2A) <br>
+                             H/Ma = Severe = 1 Field (≥ STD 2A)<br>
+                              <b style="margin-left: 50%;">or</b><hr>
+                              IRMA = Definite in 1-3 fields (< STD 8A)
+
+                          </td>
+                        </tr>
+
+                         <tr>
+                          <td><b>NPDR Level 47</b></td>
+                         <td>Moderately Severe NPDR</td>
+                         <td>Both Level 43 characteristics <br>
+                           <b> and/or one of</b><br>
+                            1.IRMA=Definite in 4-5 fields (< STD 8A)
+                            or <br>
+                            2. H/Ma=Severe in 2-3 fields (≥ STD 2A and < STD 2B)
+                            or <br>
+                            3.VB=Definite in 1 field
+                             </td>
+                       </tr>
+
+                       <tr>
+                        <td><b>NPDR Level 53 </b></td>
+                        <td>Severe NPDR</td>
+                        <td><b>One or More of the following</b><br>
+                            ≥2 of 3 L47 Characteristics <br>
+                            H/Ma=Severe ≥ 4+ fields (≥ STD 2A and STD <2B) <br>
+                            H/Ma= Very Severe in 1 field (≥ STD 2B)  <br>
+                            IRMA ≥ Moderate in 1 field (≥ STD 8A/8B)  <br>
+                            VB ≥ Definite in 2+ fields (< STD 6) <br>
+                            VB ≥ Moderate or greater in 1 field (≥ 6A/6B)
+
+                        </td>
+                       </tr>
+                       <tr>
+                        <td><b>PDR Level ≥ 60</b></td>
+                       <td>PDR</td>
+                       <td>Neovascularization/PDR in any field <br>
+                        <b>and/or</b> <br>
+                        Pan retinal photocoagulation
+                        </td>
+                      </tr>        
+                            
+                      <tr>
+                        <td colspan="5" style="font-size: 13px;font-family:Calibri;">DR = diabetic retinopathy, HE = hard exudates, SE = soft exudates, IRMA = intraretinal microvascular abnormalities, NPDR = non-proliferative DR, VB = venous beading, H/Ma = hemorrhages/microaneurysms, PDR = proliferative DR, NVE = new vessels elsewhere (> 1 DO from disc), NVD = new vessels disc (within 1 DO of disc margin), FPD = fibrous proliferations disc, FPE = fibrous proliferations elsewhere, VH = vitreous hemorrhage, PRH = preretinal hemorrhage. 
+                      * Levels 14 and 15 are not considered separate steps in the scale, but are pooled with level 10 or 20.
+                      ** NPDR levels 35 and above all require presence of microaneurysms.
+                      </td></tr>
+                            
+
+                      </tbody>
+                     </table>
+                         </div>
+
+                       </div>
+                     </div>
+                </div>
+                <div id="step-3" class="">
+                    <h2>Step 3 Content, Non ajax content</h2>
+                  <div class="container-fluid">
+                       <div class="row">
+                         <div class="col-sm-6">
+                            <table class="table-bordered" style="font-size: 10px; ">
+                                 <h4 class="text-info" style="margin-left: 5%;">DIABETIC RETINOPATHY (DR) GRADING SEVERITY SCALE– OD</h4>
+                                 <thead colspan="4" style="padding: 10px">
+                                     <th></th>
+                                     <th class="text-center" style="padding: 15px; color: #ffff; background-color:  #008398" >Field 1</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 2</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 3</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 4</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 5</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 6</th>
+                                     <th class="text-center"  style="padding: 15px;  background-color: #008398; color: #ffff;">Field 7</th>
+                                     
+                                 </thead>
+                                 <tbody> 
+                                     <tr>
+                                         <td>
+                                             <label>Microaneurysms</label>
+
+                                         </td>
+                                         <td>
+                                           <input type="checkbox" name="MA1_od" value="Definite"> Present <br>
+                                            
+
+                                         </td>
+                                         <td>
+                                         <input type="checkbox" name="MA2_od" value="Definite"> Present <br>
+                                          
+                                         </td>
+                                          <td>
+                                         <input type="checkbox" name="MA3_od" value=Definitet"> Present <br>
+                                         
+                                         </td> 
+                                         <td>
+                                         <input type="checkbox" name="MA4" value="Definite"> Present <br>
+                                         
+                                         </td> 
+                                         <td>
+                                         <input type="checkbox" name="MA5_od" value="Definite"> Present <br>
+                                        
+                                         </td>
+
+                                         <td>
+                                         <input type="checkbox" name="MA6_od" value="Definite"> Present <br>
+                                         
+                                         </td>
+                                          <td>
+                                         <input type="checkbox" name="MA7_od" value="Definite"> Present <br>
+                                         
+                                         </td>
+                                          
+                                     </tr>
+                                     <tr>
+                                       <td>
+                                        <label>Retinal Hemorrhages</label>
+                                      </td> 
+                                        <td><input type="checkbox" name="RH1_od" value="Present"> Present <br>
+                                           
+                                        </td>
+
+                                        <td><input type="checkbox" name="RH2_od" value="Present"> Present <br>
+                                        
+                                        </td>
+                                        <td>
+                                          
+                                          <input type="checkbox" name="RH3_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="RH3_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="RH3_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="RH3_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="RH3_od" value="Very Sever"> Very Sever 
+
+                                        </td>
+
+                                        <td> 
+                                         
+                                          <input type="checkbox" name="RH4_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="RH4_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="RH4_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="RH4_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="RH4_od" value="Very Sever"> Very Sever <br></td>
+                                        <td> 
+                                        
+                                          <input type="checkbox" name="RH5_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="RH5_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="RH5_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="RH5_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="RH5_od" value="Very Sever"> Very Sever <br></td>
+
+                                        <td>
+                                        
+                                          <input type="checkbox" name="RH6_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="RH6_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="RH6_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="RH6_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="RH6_od" value="Very Sever"> Very Sever <br></td>
+                                          <td>
+                                           
+                                            <input type="checkbox" name="RH7_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="RH7_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="RH7_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="RH7_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="RH7_od" value="Very Sever"> Very Sever <br></td>
+                                         
+                                     </tr>
+                                    <tr>
+                                        
+                                       <td><label>Hard Exudates</label></td>
+                                       <td><input type="checkbox" name="HE1_od" value="Definite"> Present <br>
+                                        
+
+                                       </td>
+                                        <td><input type="checkbox" name="HE2_od" value="Definite"> Present <br>
+                                       
+
+                                        </td>
+                                        <td>
+                                           <input type="checkbox" name="HE3_od" value="Definite"> Present <br>
+                                         
+
+                                        </td>
+                                        <td> 
+                                          <input type="checkbox" name="HE4_od" value="Definite"> Present <br>
+                                         
+                                        <td> 
+                                          <input type="checkbox" name="HE5_od" value="Definite"> Present <br>
+                                         
+
+                                        <td>
+                                          <input type="checkbox" name="HE6_od" value="Definite"> Present <br>
+
+                                          </td>
+                                          <td>
+                                            <input type="checkbox" name="HE7_od" value="Definite"> Present <br>
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                        
+                                       <td >
+                                          <label>Soft Exudates</label>
+                                       </td>
+                                       <td><input type="checkbox" name="SE1_od" value="Definite"> Present <br>
+                                         
+
+                                       </td>
+                                        <td><input type="checkbox" name="SE2_od" value="Definite"> Present <br>
+                                        
+
+
+                                        </td>
+                                        <td>
+                                         <input type="checkbox" name="SE3_od" value=Definitet"> Present <br>
+                                         
+
+                                        </td>
+                                        <td>
+                                           <input type="checkbox" name="SE4_od" value="Definite"> Present <br>
+                                        </td>
+                                        <td> 
+                                          <input type="checkbox" name="SE5_od" value="Definite"> Present <br>
+                                          </td>
+
+
+                                        <td>
+                                           <input type="checkbox" name="SE6_od" value="Definite"> Present <br>
+                                          </td>
+                                          <td>
+                                            <input type="checkbox" name="SE7_od" value="Definite"> Present <br>
+                                           </td>
+                                    </tr>
+                                    <tr>
+                                     <td>
+                                          <label>Venous Looping</label>
+                                       </td>
+                                      <td><input type="checkbox" name="VL1_od" value="Definite"> Present <br>
+                                       
+                                         
+
+
+                                      </td>
+                                        <td>
+
+                                          <input type="checkbox" name="VL2_od" value="Definite"> Present <br>
+
+                                         
+
+                                        </td>
+                                        <td>
+                                          <input type="checkbox" name="VL3_od" value="Definite"> Present <br> 
+                                          
+
+                                        </td>
+                                        <td> 
+                                          <input type="checkbox" name="VL4_od" value="Definite"> Present <br>
+                                          </td>
+                                        <td> 
+                                          <input type="checkbox" name="VL5_od" value="Definite"> Present <br>
+                                          </td>
+                                        <td>
+                                           <input type="checkbox" name="VL6_od" value="Definite"> Present <br>
+                                          </td>
+                                          <td>
+                                            <input type="checkbox" name="VL7_od" value="Definite"> Present <br>
+                                            </td>
+                                    </tr>
+                                    <tr>  
+                                        <td><label>Intraretinal Microvascular Abnormalities</label></td>
+
+                                        <td><input type="checkbox" name="IRMA1_od" value="Definite"> Present <br>
+                                         
+                                        </td>
+                                        <td>
+                                          <input type="checkbox" name="IRMA2_od" value="Definite"> Present <br>
+                                         
+
+                                        </td>
+                                        <td>
+                                          <input type="checkbox" name="IRMA3_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="IRMA3_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="IRMA3_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="IRMA3_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="IRMA3_od" value="Very Sever"> Very Sever 
+
+                                        </td>
+                                        <td>
+                                         
+                                         <input type="checkbox" name="IRMA4_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="IRMA4_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="IRMA4_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="IRMA4_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="IRMA4_od" value="Very Sever"> Very Sever <br></td>
+                                        <td> 
+                                          
+                                          <input type="checkbox" name="IRMA5_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="IRMA5_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="IRMA5_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="IRMA5_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="IRMA5_od" value="Very Sever"> Very Sever <br></td>
+
+                                        <td>
+                                          
+                                          <input type="checkbox" name="IRMA6_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="IRMA6_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="IRMA6_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="IRMA6_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="IRMA6_od" value="Very Sever"> Very Sever <br></td>
+                                          <td>
+                                            
+                                            <input type="checkbox" name="IRMA7_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="IRMA7_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="IRMA7_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="IRMA7_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="IRMA7_od" value="Very Sever"> Very Sever <br></td>
+                                       
+                                    </tr>
+
+                                     <tr>
+                                         <td><label>Venous Bleeding</label></td>
+                                         <td><input type="checkbox" name="VB1_od" value="Definite"> Present <br>
+                                          
+
+                                         </td>
+                                        <td>
+                                          <input type="checkbox" name="VB2_od" value="Definite"> Present <br>
+                                       
+
+                                        </td>
+                                        <td>
+                                          
+                                          <input type="checkbox" name="VB3_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="VB3_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="VB3_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="VB3_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="VB3_od" value="Very Sever"> Very Sever 
+
+                                        </td>
+                                        <td> 
+                                           
+                                          <input type="checkbox" name="VB4_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="VB4_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="VB4_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="VB4_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="VB4_od" value="Very Sever"> Very Sever <br></td>
+                                        <td>
+                                         
+                                          <input type="checkbox" name="VB5_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="VB5_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="VB5_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="VB5_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="VB5_od" value="Very Sever"> Very Sever <br></td>
+
+                                        <td>
+                                          
+                                          <input type="checkbox" name="VB6_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="VB6_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="VB6_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="VB6_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="VB6_od" value="Very Sever"> Very Sever <br></td>
+                                          <td>
+                                            
+                                            <input type="checkbox" name="VB7_od" value="Questionable"> Questionable <br>
+                                          <input type="checkbox" name="VB7_od" value="Definite"> Definite <br>
+                                          <input type="checkbox" name="VB7_od" value="Moderate"> Moderate <br>
+                                          <input type="checkbox" name="VB7_od" value="Sever"> Sever <br>
+                                          <input type="checkbox" name="VB7_od" value="Very Sever"> Very Sever <br></td>
+                                     </tr>
+                                      <tr>
+                                          <td><label>NPDR LEVEL OD</label></td>
+                                          <td colspan="5"><select class="form-control" name="levelod">
+                                            <option>Select NPDR</option>
+
+                                          <option value="NPDR Level 10 ">
+                                            NPDR Level 10 
+                                          </option>
+                                           <option value="NPDR Level 14*">
+                                            NPDR Level 14*
+                                          </option>
+                                           <option value="NPDR Level 15*">
+                                            NPDR Level 15*
+                                          </option>
+                                           <option value="NPDR Level 20">
+                                         NPDR Level 20
+                                          </option>
+                                           <option value="NPDR Level 35**">
+                                            NPDR Level 35**
+                                          </option>
+                                           <option value=" NPDR Level 43">
+                                            NPDR Level 43
+                                          </option>
+                                          <option value="NPDR Level 47"> 
+                                          NPDR Level 47
+                                          </option>
+                                          <option value=" NPDR Level 53">
+                                          NPDR Level 53
+                                          </option>
+                                          <option value="PDR Level ≥ 60">
+                                          PDR Level ≥ 60
+                                          </option>
+                                        </select>
+                                      </td>
+                                          
+                                      </tr>
+
+
+                                 </tbody>
+                                 
+
+                    </table>
+
+                         </div>
+
+                         <div class="col-sm-6">
+                            <table class="table table-bordered table-hover" style="font-size:10px; color:black; ">
+                      <h5 class="text-info text-danger"  style="margin-left: 8%;">DIABETIC RETINOPATHY (DR) GRADING KEY</h5>
+                       <thead>
+                        
+                       </thead>
+                       <tbody>
+                         <tr>
+                           <td><b>NPDR Level 10</b> </td>
+                            <td>DR Absent</td>
+                             <td>MA and other characteristics absent</td>
+                         </tr>
+
+                         <tr>
+                           <td><b>NPDR Level 14* </b> </td>
+                            <td>DR Questionable</td>
+                             <td><b>One or more of:</b>
+                              HE definite; MA absent <br>
+                              IRMA definite; MA absent <br>
+                              Venous loops >D/1; MA absent 
+                              </td>
+                         </tr>
+
+                         <tr>
+                           <td><b>NPDR Level 15* </b> </td>
+                            <td>DR Questionable</td>
+                            <td>Hemorrhage Definite <br>
+                              MAs Absent
+                               
+                            </td>
+                            
+                            <tr>
+                              <td><b>NPDR Level 20 </b></td>
+                              <td>MAs Only</td>
+                              <td>Microaneurysms definite, other characteristics absent</td>
+                            </tr>
+                            <tr>
+                            <td><b>NPDR Level 35** </b></td>
+                            <td>Mild NPDR</td>
+                            <td><b>One or more of:</b><br>
+                                Venous loops definite ≥1 <br>
+                                SE, IRMA or VB = Questionable <br>
+                                RH = present (< STD 1) <br>
+                                HE Definite ≥ 1 (STD 3, 4 and 5 in any field) <br>
+                                SE Definite ≥ 1 (STD 8A and 5)
+
+
+
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td><b>NPDR Level 43</b></td>
+                          <td>Moderate NPDR</td>
+                          <td>
+                             H/Ma = Moderate in 4-5 fields (≥ STD 1 and < STD 2A) <br>
+                             H/Ma = Severe = 1 Field (≥ STD 2A)<br>
+                              <b style="margin-left: 50%;">or</b><hr>
+                              IRMA = Definite in 1-3 fields (< STD 8A)
+
+                          </td>
+                        </tr>
+
+                         <tr>
+                          <td><b>NPDR Level 47</b></td>
+                         <td>Moderately Severe NPDR</td>
+                         <td>Both Level 43 characteristics <br>
+                           <b> and/or one of</b><br>
+                            1.IRMA=Definite in 4-5 fields (< STD 8A)
+                            or <br>
+                            2. H/Ma=Severe in 2-3 fields (≥ STD 2A and < STD 2B)
+                            or <br>
+                            3.VB=Definite in 1 field
+                             </td>
+                       </tr>
+
+                       <tr>
+                        <td><b>NPDR Level 53 </b></td>
+                        <td>Severe NPDR</td>
+                        <td><b>One or More of the following</b><br>
+                            ≥2 of 3 L47 Characteristics <br>
+                            H/Ma=Severe ≥ 4+ fields (≥ STD 2A and STD <2B) <br>
+                            H/Ma= Very Severe in 1 field (≥ STD 2B)  <br>
+                            IRMA ≥ Moderate in 1 field (≥ STD 8A/8B)  <br>
+                            VB ≥ Definite in 2+ fields (< STD 6) <br>
+                            VB ≥ Moderate or greater in 1 field (≥ 6A/6B)
+
+                        </td>
+                       </tr>
+                       <tr>
+                        <td><b>PDR Level ≥ 60</b></td>
+                       <td>PDR</td>
+                       <td>Neovascularization/PDR in any field <br>
+                        <b>and/or</b> <br>
+                        Pan retinal photocoagulation
+                        </td>
+                      </tr>        
+                            
+                      <tr>
+                        <td colspan="5" style="font-size: 13px;font-family:Calibri;">DR = diabetic retinopathy, HE = hard exudates, SE = soft exudates, IRMA = intraretinal microvascular abnormalities, NPDR = non-proliferative DR, VB = venous beading, H/Ma = hemorrhages/microaneurysms, PDR = proliferative DR, NVE = new vessels elsewhere (> 1 DO from disc), NVD = new vessels disc (within 1 DO of disc margin), FPD = fibrous proliferations disc, FPE = fibrous proliferations elsewhere, VH = vitreous hemorrhage, PRH = preretinal hemorrhage. 
+                      * Levels 14 and 15 are not considered separate steps in the scale, but are pooled with level 10 or 20.
+                      ** NPDR levels 35 and above all require presence of microaneurysms.
+                      </td></tr>
+                            
+
+                      </tbody>
+                     </table>
+                         </div>
+
+                       </div>
+                     </div>
+                </div>
+                <div id="step-4" class="">
+                    <h2>Step 4 Content, Non ajax content</h2>
+                    <div class="card">
+                        <div class="card-header">My Details</div>
+                        <div class="card-block p-0">
+                          <table class="table">
+                              <tbody>
+                                  <tr> <th>Name:</th> <td>Tim Smith</td> </tr>
+                                  <tr> <th>Email:</th> <td>example@example.com</td> </tr>
+                              </tbody>
+                          </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Include SmartWizard JavaScript source -->
+    <script type="text/javascript" src="../dist/js/jquery.smartWizard.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            // Toolbar extra buttons
+            var btnFinish = $('<button></button>').text('Finish')
+                                             .addClass('btn btn-info')
+                                             .on('click', function(){ alert('Finish Clicked'); });
+            var btnCancel = $('<button></button>').text('Cancel')
+                                             .addClass('btn btn-danger')
+                                             .on('click', function(){ $('#smartwizard').smartWizard("reset"); });
+
+            // Smart Wizard
+            $('#smartwizard').smartWizard({
+                    selected: 0,
+                    theme: 'arrows',
+                    transitionEffect:'fade',
+                    toolbarSettings: {toolbarPosition: 'bottom',
+                                      toolbarExtraButtons: [btnFinish, btnCancel]
+                                    }
+                 });
+        });
+    </script>
+</body>
+</html>
